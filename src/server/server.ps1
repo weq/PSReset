@@ -67,7 +67,7 @@ function Send-UserTemporaryCode {
     $number = "+15005550006"
 
     # Twilio API endpoint and POST params
-    $url = "https://api.twilio.com/2010-04-01/Accounts/$sid/Messages.json"
+    $url = "https://api.twilio.com/2010-04-01/Accounts/$($sid)/Messages.json"
     $params = @{ To = ($user.telephoneNumber); From = $number; Body = "Temporary code: $($userTemporaryCode)" }
 
     # Create a credential object for HTTP basic auth
