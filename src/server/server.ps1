@@ -59,9 +59,9 @@ function Send-UserTemporaryCode {
     $user = Get-ADUser -Filter {SamAccountName -like $username} -Properties telephoneNumber
     # Pull in Twilio account info, previously set as environment variables
     $sid = $env:TWILIO_ACCOUNT_SID
-    $sid = "AC7f3321cdd101077bd199ea8c2578bcd2"
+    $sid = ""
     $token = $env:TWILIO_AUTH_TOKEN
-    $token = "6ab95387841ec3593363328148476a2c"
+    $token = ""
     $number = $env:TWILIO_NUMBER
     $number = "+4759446601"
     $number = "+15005550006"
